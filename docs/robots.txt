@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cpzhang9487.github.io/fastapi-vue-template/sitemap.xml
