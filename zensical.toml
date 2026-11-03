@@ -1,5 +1,12 @@
 [project]
 site_name = "FastAPI Vue Template"
+site_url = "https://CPZhang9487.github.io/fastapi-vue-template"
+site_description = "FastAPI + Vue 的專案模板"
+site_author = "CPZhang9487"
+copyright = "Copyright &copy; 2026 CPZhang9487"
+
+repo_url = "https://github.com/CPZhang9487/fastapi-vue-template"
+repo_name = "CPZhang9487/fastapi-vue-template"
 
 nav = [
     "index.md",
