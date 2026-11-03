@@ -1,0 +1,26 @@
+[project]
+site_name = "FastAPI Vue Template"
+
+nav = [
+    "index.md",
+    { "從零開始" = [
+        "從零開始/0001/index.md",
+    ]},
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "切換到淺色模式"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "切換到深色模式"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "切換到跟隨系統"
