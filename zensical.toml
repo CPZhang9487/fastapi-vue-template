@@ -1,11 +1,11 @@
 [project]
 site_name = "FastAPI Vue Template"
-site_url = "https://CPZhang9487.github.io/fastapi-vue-template"
+site_url = "https://cpzhang9487.github.io/fastapi-vue-template"
 site_description = "FastAPI + Vue 的專案模板"
 site_author = "CPZhang9487"
-copyright = "Copyright &copy; 2026 CPZhang9487 · <a href='https://github.com/CPZhang9487/fastapi-vue-template/blob/main/LICENSE'>MIT License</a>"
+copyright = "Copyright &copy; 2026 CPZhang9487 · <a href='https://github.com/cpzhang9487/fastapi-vue-template/blob/main/LICENSE'>MIT License</a>"
 
-repo_url = "https://github.com/CPZhang9487/fastapi-vue-template"
+repo_url = "https://github.com/cpzhang9487/fastapi-vue-template"
 repo_name = "CPZhang9487/fastapi-vue-template"
 
 nav = [
