@@ -9,8 +9,94 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "inline-snapshot",
+    "pytest",
+    "pytest-asyncio",
+    "pytest-cov",
+    "pytest-dotenv",
+    "pytest-mock",
+    "time-machine",
     "zensical",
 ]
 
 [tool.fastapi]
 entrypoint = "app:app"
+
+[tool.pytest.ini_options]
+addopts = [
+    "-ra",
+    "--tb=short",
+    "--strict-markers",
+    "--strict-config",
+    "--durations=10",
+    "--cov=.",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+]
+asyncio_mode = "auto"
+filterwarnings = [
+    "error",
+    "ignore::DeprecationWarning",
+]
+pythonpath = "."
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py314"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+
+[tool.ruff.lint]
+select = [
+    "ALL",
+]
+ignore = [
+    "CPY001",
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D107",
+    "D203",
+    "D212",
+    "D400",
+    "D415",
+    "E501",
+    "PGH003",
+    "PLR0913",
+    "PLR0917",
+    "RUF001",
+    "RUF002",
+    "RUF003",
+]
+
+[tool.ruff.lint.flake8-type-checking]
+runtime-evaluated-base-classes = [
+    "pydantic.BaseModel",
+]
+runtime-evaluated-decorators = [
+    "fastapi.FastAPI.delete",
+    "fastapi.FastAPI.get",
+    "fastapi.FastAPI.patch",
+    "fastapi.FastAPI.post",
+    "fastapi.FastAPI.put",
+    "fastapi.APIRouter.delete",
+    "fastapi.APIRouter.get",
+    "fastapi.APIRouter.patch",
+    "fastapi.APIRouter.post",
+    "fastapi.APIRouter.put",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = [
+    "INP001",
+    "PLR2004",
+    "S101",
+    "S105",
+    "S106",
+]
